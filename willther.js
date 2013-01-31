@@ -16,6 +16,37 @@
 			var lon = position.coords.longitude;
 
 			var geoAPI = 'http://where.yahooapis.com/geocode?location='+lat+','+lon+'&flags=J&gflags=R&appid='+APPID;
+
+			// console.log(geoAPI);   //get the geolocation's json;
+			
+			var wsql = 'select * from weather.forecast where woeid=WID and u="'+DEG+'"',
+					weatherYQL = 'http://query.yahooapis.com/v1/public/yql?q='+encodeURIComponent(wsql)+'&format=json&callback=?',
+					code, city, results, woeid;
+
+			
+			
+			$.getJSON(geoAPI,function(r){
+
+				if(r.ResultSet.Found == 1){
+
+					results = r.ResultSet.Results;
+					city = results[0].city;
+					code = results[0].statecode || results[0].countrycode;
+					woeid = results[0].woeid;
+
+					//weather API
+					$.getJSON(weatherYQL.replace('WID',woeid), function(r){
+
+						if(r.query.count == 1){
+
+							//create the weather items in the #scroller UL
+
+						}
+
+					})
+				}
+
+			})
 		} 
 
 		function locationError(error) {
