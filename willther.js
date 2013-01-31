@@ -1,6 +1,12 @@
 (function(){
 	$(function(){
 
+		$('a').on('click',function(){
+			$('body').toggleClass('color');
+			$('.area-time').toggleClass('font-color');
+			// console.log('success');
+		})
+
 		var APPID = '1xLcLN3c'; // Your Yahoo Application ID
 		var DEG = 'c';  // c for celsius, f for fahrenheit
 
@@ -69,5 +75,7 @@
 		function showError(msg) {
 			console.log(msg);
 		}
+
+		
 	});
 })(jQuery);

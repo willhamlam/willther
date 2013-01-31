@@ -3,12 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<title>willther</title>
-	<link rel="stylesheet" href="reset.css">
+	<!-- <link rel="stylesheet" href="reset.css"> -->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	Hello World;
+	<div class="container">
+		<div class="header"></div>
+		<div class="main">
+			<div id="slider" class="weather-slider">
+				<ul>
+					<li style='display:block'>
+						<div class="slider-wrap">
+							<div class="slider-container">
+								<div class="col left">
+									<img class="woeid-icon" src="img/cloud-sun.png" height="312" width="350" alt="">
+									<h2 class="woeid-area">Tokeyo</h2>
+								</div>
+								<div class="col right">
+									<h1 class="area-tem">24&deg;</h1>
+									<div class="area-time">now</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style='display:none'>
+						<div class="slider-wrap">
+							<div class="slider-container">
+								<div class="col left">
+									<img class="woeid-icon" src="img/rain.png" height="312" width="350" alt="">
+									<h2 class="woeid-area">Tokeyo</h2>
+								</div>
+								<div class="col right">
+									<h1 class="area-tem">19&deg;</h1>
+									<div class="area-time">MON</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="slider-nav">
+					<a href="/" class="nav-arrow" onclick='slider.prev();return false;'>pre</a>
+					<a href="/" class="nav-arrow" onclick='slider.next();return false;'>next</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="willther.js"></script>
+	<script type="text/javascript" src="swipe.js"></script>
+	<script type="text/javascript">
+		var slider = new Swipe(document.getElementById('slider'));
+	</script>
 </body>
 </html>
