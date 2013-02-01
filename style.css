@@ -1,0 +1,128 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	-webkit-transition: all 1s ease-out;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+.container {
+	height: 100%;
+}
+
+.main {
+	width: 100%;
+	position: relative;
+	top: 150px;
+	/*-webkit-transition: all 0.5s ease-in;*/
+}
+
+#slider li{
+	position: relative;
+}
+
+.slider-wrap {
+	width: 100%;
+}
+
+.slider-container {
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.col {
+	width: 400px;
+	height: 400px;
+	margin: 50px;
+}
+
+/* --- left-col --- */
+.left{
+	float: left;
+}
+
+.woeid-icon{
+	width: 350px;
+	padding: 0px 25px;
+}
+
+.woeid-area {
+	font-family: 'Helvetica Neue';
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/* --- right-col --- */
+.area-tem {
+	margin-bottom: 40px;
+	font-family: 'Helvetica Neue';
+	font-size: 120px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.area-time {
+	font-family: 'Helvetica Neue';
+	font-size: 60px;
+	font-weight: 200;
+	width: 200px;
+	background-color: #ffffff;
+	text-transform: uppercase;
+	border-radius: 10px;
+	margin: 0 auto;
+	opacity: 0;
+	-webkit-transition: all 1s ease-out;
+}
+.right {
+	float: right;
+}
+
+/* --- slider-nav --- */
+.slider-nav {
+	position: relative;
+	top: -250px;
+}
+
+.next-day{
+	background: url(img/arrow-sun.png) no-repeat;
+	left: 500px;
+}
+
+.last-day {
+	background: url(img/arrow-moon.png) no-repeat;
+	left: -550px;
+}
+
+.nav-arrow:hover{
+	opacity: 1;
+}
+
+.nav-arrow {
+	position: relative;
+	display: inline-block;
+	width: 74px;
+	height: 74px;
+	opacity: 0.65;
+	border-radius: 50%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+.color{
+	background-color: #419EB3;
+}
+.font-color{
+	color: #419EB3;
+}
