@@ -83,7 +83,7 @@ a {
 	text-transform: uppercase;
 	border-radius: 10px;
 	margin: 0 auto;
-	opacity: 0;
+	color: #ffffff;
 	-webkit-transition: all 1s ease-out;
 }
 .right {

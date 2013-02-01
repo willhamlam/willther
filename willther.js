@@ -21,7 +21,7 @@
 		];
 
 		var weatherColorMap = [
-		'0','','','','','','','','','','','','','','','','','','','','','','','','','','#419EB3','','','','','','','#333333','','','','','','','','','','','','','',''
+		'0','','','','','','','','','','','','','','','','','','','','','','','','','','#419EB3','','','','','#333333','','#333333','','','','','','','','','','','','','',''
 		];
 
 		//Does this browser support geolocation?
@@ -75,6 +75,10 @@
 							}
 							window.slider = new Swipe(document.getElementById('slider'));
 							var index = $('.day'+slider.getPos() ).attr('data-index');
+							
+							
+							
+						}
 							var changeColor = weatherColorMap[index];
 							$('body').css({
 								'background-color': changeColor
@@ -82,8 +86,6 @@
 							$('.area-time').css({
 								'color': changeColor
 							})
-						}
-
 					})
 				}
 
