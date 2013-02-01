@@ -3,7 +3,6 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #FF7C4B;
 	text-align: center;
 	-webkit-transition: all 1s ease-out;
 }
@@ -24,7 +23,12 @@ a {
 .main {
 	width: 100%;
 	position: relative;
-	top: 200px;
+	top: 150px;
+	/*-webkit-transition: all 0.5s ease-in;*/
+}
+
+#slider li{
+	position: relative;
 }
 
 .slider-wrap {
@@ -50,6 +54,7 @@ a {
 }
 
 .woeid-icon{
+	width: 350px;
 	padding: 0px 25px;
 }
 
@@ -73,17 +78,48 @@ a {
 	font-family: 'Helvetica Neue';
 	font-size: 60px;
 	font-weight: 200;
-	color: #FF7C4B;
 	width: 200px;
 	background-color: #ffffff;
 	text-transform: uppercase;
 	border-radius: 10px;
 	margin: 0 auto;
+	opacity: 0;
 	-webkit-transition: all 1s ease-out;
 }
 .right {
 	float: right;
 }
+
+/* --- slider-nav --- */
+.slider-nav {
+	position: relative;
+	top: -250px;
+}
+
+.next-day{
+	background: url(img/arrow-sun.png) no-repeat;
+	left: 500px;
+}
+
+.last-day {
+	background: url(img/arrow-moon.png) no-repeat;
+	left: -550px;
+}
+
+.nav-arrow:hover{
+	opacity: 1;
+}
+
+.nav-arrow {
+	position: relative;
+	display: inline-block;
+	width: 74px;
+	height: 74px;
+	opacity: 0.65;
+	border-radius: 50%;
+	-webkit-transition: all 0.5s ease-out;
+}
+
 .color{
 	background-color: #419EB3;
 }
